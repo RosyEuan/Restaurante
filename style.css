@@ -1,0 +1,672 @@
+.fondo {
+    background: url('imagenes/fondo.png') lightgray 0px 0px / 100% 100% no-repeat;
+    width: 1920px;
+    height: 648px;
+    flex-shrink: 0;
+    margin-top: 80px;
+}
+body {
+    background-color: #100A0A;
+    margin: 0;
+}
+
+.navbar {
+    background-color: #170F0F;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    z-index: 1000;
+    width: 1920px;
+    height: 80px;
+    flex-shrink: 0;
+}
+.nav-item{
+    font-family: 'Lucida Bright';
+    font-size: 24px;
+    color: #FFFFFF; 
+}
+.logo {
+    width: 160px;
+    height: 72px;
+}
+
+.Bienvenida {
+    width: 704px;
+    height: 64px;
+    font-family: 'Playball', cursive;
+    color: #F3EBEB;
+    text-align: center;
+    font-size: 48px;
+    font-style: normal;
+    line-height: normal;
+    margin: 0;
+    margin-top: 128px;
+    margin-left: 712px;
+}
+.descripcion {
+    width: 704px;
+    height: 256px;
+    color: #EFEFEF;
+    text-align: justify;
+    font-family: "Linden Hill", serif;
+    font-size: 32px;
+    font-style: normal;
+    line-height: normal;
+    margin: 0;
+    margin-top: 64px;
+    margin-left: 712px;
+}
+
+
+.titulo_oferta {
+    width: 184px;
+    height: 48px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: "Lucida Bright";
+    font-size: 40px;
+    margin: 0;
+    margin-top: 80px;
+    margin-left: 648px;
+}
+#elipses {
+    margin: 8px;
+}
+.control {
+    height: 568px;
+}
+.control_img {
+    height: 568px;
+    margin-top: 16px;
+}
+
+
+
+.titulo_menu {
+    display: flex;
+    width: 184px;
+    height: 48px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: "Lucida Bright";
+    font-size: 40px;
+    margin: 0;
+    margin-left: 648px;
+    margin-top: 80px;
+}
+.cuadro {
+    margin: 0;
+}
+.cardi {
+    margin: 0;
+    width: 440px;
+    height: 736px;
+    flex-shrink: 0;
+    margin: 0;
+    margin-left: 24px;
+    margin-right: 24px;
+    margin-top: 24px;
+}
+.card-img-top {
+    width: 440px;
+    height: 240px;
+    flex-shrink: 0;
+    border-radius: 8px;
+}
+.descripcion-comida {
+    margin: 0;
+    color: #FFF;
+    text-align: justify;
+    font-family: "Linden Hill";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 440px;
+    height: 328px;
+    flex-shrink: 0;
+}
+.titulo {
+    width: 392px;
+    height: 40px;
+    color: #FFF;
+    text-align: center;
+    font-family: "Lucida Bright";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 24px;
+}
+.btn_menu {
+    width: 224px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #302222;
+    margin-top: 32px;
+    margin-left: 108px;
+    padding: 4px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+.boton-ver{
+    margin-top: 0;
+    
+}
+
+
+h4 {
+    display: flex;
+    width: 144px;
+    height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #EBEBEB;
+    text-align: center;
+    font-family: "Linden Hill";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-items: center;
+    margin-top: 0;
+}
+
+.Reservacion_Img {
+    flex-shrink: 0;
+    float: right;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    overflow: hidden;  
+
+    width: 704px;
+    height: 648px;
+    flex-shrink: 0;
+    border-radius: 0px 24px 24px 0px;
+}
+  
+.Reservacion_text {
+    display: flex;
+    width: 560px;
+    height: 160px;
+    color: #EFEFEF;
+    text-align: justify;
+    font-family: "Linden Hill", serif;
+    font-size: 32px;
+    font-style: normal;
+    line-height: normal;
+    margin-top: 56px;
+}
+.Reservacion_Nom {
+    color: #FFF;
+    text-align: justify;
+    font-family: "Playball";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 64px;
+
+}
+.reservaciones {
+    margin: 0;
+    margin-top: 80px;
+}
+.tit_reserva {
+    width: 280px;
+    height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: "Lucida Bright";
+    font-size: 40px;
+    margin: 0;
+    margin-left: 40px;
+    padding:40px;
+}
+.btn_reservar {
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #100A0A;
+    border-color: #FFF;
+    margin-top: 45px;
+    margin-left: 125px;
+    padding: 24px;
+    padding-left: 65px;
+    padding-right: 10px;
+    width: 296px;
+    height: 80px;
+    justify-content: center;
+}
+h5 {
+    display: flex;
+    width: 168px;
+    height: 32px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #EBEBEB;
+    text-align: center;
+    font-family: "Lucida Bright";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+.eventos {
+    margin-top: 80px;
+    background-image: url('imagenes/eventoos.png');
+    width: 1728px;
+    height: 472px;
+    flex-shrink: 0;
+}
+.titulo-evento {
+    display: flex;
+    width: 424px;
+    height: 56px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: "Lucida Bright";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration: underline;
+    margin-top: 224px;
+    margin-left: 552px;
+}
+.trad_eventos {
+    margin-top: 48px;
+    font-family: "Lucida Bright";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    width: 656px;
+    height: 32px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.descripcion_eventos {
+    width: 1128px;
+    text-align: justify;
+    font-family: "Linden Hill";
+    font-size: 32px;
+    font-style: normal;
+    margin: 48px;
+    justify-content: center;
+    margin-bottom: 0;
+    margin-left:175px;
+}
+
+.titulo-Galeria {
+    margin: 0;
+    margin-left: 648px;
+    margin-top: 80px;
+    display: flex;
+    width: 144px;
+    height: 48px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: "Lucida Bright";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 100px;
+    line-height: normal;
+
+}
+.descripcion_Galeria {
+    width: 1200px;
+    text-align: center;
+    font-family: "Linden Hill";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    margin-top: 32px;
+    margin-left: 144px;
+}
+.desc_Galeria {
+    width: 880px;
+    text-align: center;
+    font-family: "Linden Hill";
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    margin-top: 16px;
+    margin-left: 304px;
+}
+.Galeria_Img_Model1 {
+    margin-left: 4px;
+    margin-right: 4px;
+    margin-bottom: 4px;
+}
+
+.Galeria_Img_Model2 {
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+.titulo_sobre {
+    text-align: center;
+    flex-shrink: 0;
+    color: #FFF;
+    font-family: "Lucida Bright";
+    font-size: 40px;
+    margin: 0;
+    margin-left: 770px;
+}
+.nosotros {
+    margin-top: 88px;
+}
+.img-nosotros {
+    width: 704px;
+    height: 600px;
+    float: left;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 1;
+    border-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    overflow: hidden;  
+}
+  
+.desc-nosotros {
+    margin-top: 20px;
+    width: 672px;
+    height: 544px;
+    color: rgba(255,255,255,1);
+    top: 233px;
+    font-family: "Linden Hill";
+    font-size: 32px;
+    opacity: 1;
+    text-align: justify;
+}
+.descrip-nosotros {
+    margin: 0;
+    width: 672px;
+    height: 544px;
+    color: rgba(255,255,255,1);
+    top: 233px;
+    font-family: "Linden Hill";
+    font-size: 32px;
+    opacity: 1;
+    text-align: justify;
+}
+
+
+.titulo_res{
+    margin: 0;
+    display: flex;
+    width: 184px;
+    height: 48px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: "Lucida Bright";
+    font-size: 40px;
+    margin-top: 70px;
+    margin-left: 648px;
+}
+#carousel {
+    margin-top: 24px;
+    margin-left: 8px;
+}
+.row {
+    font-size: 24px;
+    text-align: justify;
+    font-family: Linden Hill;
+}
+.controles {
+    width: 24px;
+}
+.controles2 {
+    width: 56px;
+}
+.dejar_coment {
+    display: flex;
+    width: 464px;
+    height: 96px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #FFF;
+    text-align: center;
+    font-family: "Lucida Bright";
+    font-size: 38px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 0;
+}
+.Coment{
+    margin-top: 32px;
+    color: #FFF;
+    text-align: left;
+    font-family: "Lucida Bright";
+    font-size: 28px;
+    font-style: normal;
+    line-height: normal;
+    flex-direction: column;
+    flex-shrink: 0;
+}
+.opinion{
+    color: #FFF;
+    text-align: justify;
+    font-family: "Lucida Bright";
+    justify-content: left;
+    text-align:justify;
+    flex-shrink: 0;  
+    margin-top: 32px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    display: flex;
+    width: 560px;
+    height: 80px;
+    flex-direction: column;
+}
+.boton1 {
+    margin: 0;
+}
+.boton_sesion {
+  flex-shrink: 0;
+  border-radius: 8px;
+  background: #100A0A;
+  border-color: #FFF;
+  margin-top: 56px;
+  margin-left: 40px;
+  padding: 16px;
+  width: 248px;
+  height: 72px;
+  justify-content: center;
+}
+.calificacion {
+    margin-left: 120px;
+}
+.agregar_coment {
+    margin-left: 120px;
+    margin-top: 24px;
+    width: 701px;
+    height: 208px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    background: rgba(255, 255, 255, 0.00);
+}
+.txt_coment {
+    margin: 0;
+    margin-left: 120px;
+    margin-top: 24px;
+    width: 701px;
+    height: 208px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    background: rgba(255, 255, 255, 0.00);
+}
+.enviar{
+    margin: 0;
+}
+.btn_enviar {
+    width: 224px;
+    height: 48px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: #302222;
+    margin-left: 360px;
+    padding: 4px;
+}
+.res-nombres {
+    margin-left: 32px;
+    border-radius: 8px;
+    border: 1px solid #FFF;
+    background: rgba(255, 255, 255, 0.00);
+    width: 408px;
+    height: 320px;
+    flex-shrink: 0;
+}
+.res-desc {
+    color: #FFF;
+    background: rgba(255, 255, 255, 0.00);
+    text-align: justify;
+    font-family: "Linden Hill";
+    font-size: 32px;
+    font-style: normal;
+    line-height: normal;
+    display: flex;
+    width: 384px;
+    height: 216px;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-left: 8px;
+}
+.estrellas {
+    margin-top: 16px;
+}
+
+.preguntasfrecuentes{
+    color: #FFF;
+    font-family: "Lucida Bright";
+    font-size: 40px;
+    font-style: normal;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.seccion{
+    font-family: "Lucida Bright";
+    font-size: 22px;
+    color: #FFF;
+  text-align: justify;
+  font-style: normal;
+  line-height: normal;
+    flex-direction: column;
+  justify-content: flex-end;
+  flex-shrink: 0;
+}
+.respuestas{
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  color: #FFF;
+  text-align: justify;
+  font-family: "Linden Hill";
+  font-size: 20px;
+  font-style: normal;
+}
+.jaguar{
+    width: 1110px;
+  height: 350px;
+  flex-shrink: 0;
+  border-radius: 24px;
+}
+.imagen{
+    margin-top: 80px;
+    text-align: center;
+    position: relative;
+    text-align: center;
+}
+.accordion-body{
+    background: #575252;
+}
+.accordion-button{
+    background: #100A0A;
+}
+
+.contact_todo{
+    margin-top: 40px;
+}
+footer {
+    background-color: #170F0F; 
+    padding: 40px 0; 
+    margin-top: 80px;
+}
+footer h5 {
+    margin-bottom: 20px; 
+    color: #ffffff;
+}
+footer a {
+    color: #ffffff; 
+    text-decoration: none;
+}
+footer a:hover {
+    color: #ffffff; 
+}
+footer .row div {
+    margin-bottom: 20px; 
+}
+footer .text-end a {
+    margin-right: 15px; 
+}
+.direccion{
+    font-family: "Linden Hill";
+    font-size: 18px;
+    margin-left: 64px;
+
+}
+.lucida{
+    font-family: "Lucida Bright";
+    font-size: 28px;
+    width: 288px;
+}
+.reservados{
+    font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+}
+.iconos{
+ font-size: 2rem;
+}
