@@ -412,7 +412,7 @@
                             nos ayuda a mejorar como restaurante.
                         </div>
                         <div class="boton1">
-                            <button type="button" class="boton_sesion btn-outline-dark btn-lg">Registrar</button>
+                            <button type="button" class="boton_sesion btn-outline-dark btn-lg">Registrarse</button>
                             <button type="button" class="boton_sesion btn-outline-dark btn-lg">Iniciar Sesión</button>
                         </div>
                     </div>
