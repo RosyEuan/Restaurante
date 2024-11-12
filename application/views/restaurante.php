@@ -19,7 +19,7 @@
 <body>
     <!-- Barra de navegación e Inicio -->
     <div class="container-fluid">
-        <div class="row">
+        <div class="row ">
             <nav class="navbar">
                 <div class="container-md">
                     <img class="logo text-white" src="imagenes/logo_2.png" alt="Logo Ko'ten Janal">
@@ -104,7 +104,7 @@
     <div class="container-fluid" id="menu">
         <h2 class="titulo_menu col-2">Menú</h2> 
         <div class="row">
-            <div class="row row-cols-1 row-cols-md-3">
+            <div class="row row-cols-1 row-cola-md-2 row-cols-md-3">
                 <div class="cuadro col-4">
                     <div class="cardi">
                         <img class="card-img-top" src="imagenes/platillo.png" alt="imagen de comida">
