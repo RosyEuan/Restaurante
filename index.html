@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario mesa</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <style>
+        body{
+            margin: 70px;
+        }
+         .container {
+            width: 50%;
+            margin: auto;
+            padding: 50px;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .form-group {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+        input {
+            width: 48%;
+            padding: 10px;
+            margin: 5px;
+            background-color: lightgray;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            background-color: yellow;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+
+    
+    <div id="app">
+        <div class="container">
+            <h2>Agregar mesa</h2>
+            <div class="form-group">
+                <label>Numero:</label>
+                <input type="text" v-model="mesa.numero">
+                <label>Sección:</label>
+                <input type="text" v-model="mesa.seccion">
+            </div>
+            <div class="form-group">
+                <label>Capacidad:</label>
+                <input type="text" v-model="mesa.capacidad">
+                <label>Estado:</label>
+                <input type="text" v-model="mesa.estado">
+            </div>
+            <button @click="registrarMesa">Registrar</button>
+        </div>
+    </div>
+    <script>
+        const { createApp } = Vue;
+        createApp({
+            data() {
+                return {
+                    mesa: {
+                        numero: '',
+                        seccion: '',
+                        capacidad: '',
+                        estado: ''
+                    }
+                };
+            },
+            methods: {
+                registrarMesa() {
+                    console.log("Mesa registrada:", this.mesa);
+                    alert("Mesa registrada con éxito");
+                }
+            }
+        }).mount('#app');
+    </script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conectar API con HTML</title>
+</head>
+<body>
+    <h1>Gestión de Mesas</h1>
+
+    <!-- Formulario para crear una mesa -->
+    <h2>Crear Mesa</h2>
+    <form id="create-form">
+        <input type="text" id="numero_mesa" placeholder="Número de Mesa" required>
+        <input type="text" id="seccion_mesa" placeholder="Sección de Mesa" required>
+        <input type="number" id="capacidad" placeholder="Capacidad" required>
+        <input type="text" id="estado" placeholder="Estado" required>
+        <button type="submit">Crear Mesa</button>
+    </form>
+
+    <h2>Mesas Existentes</h2>
+    <ul id="mesas-list"></ul>
+
+    <h2>Actualizar Mesa</h2>
+    <form id="update-form">
+        <input type="number" id="update-id" placeholder="ID de la Mesa" required>
+        <input type="text" id="update-numero_mesa" placeholder="Nuevo Número de Mesa" required>
+        <input type="text" id="update-seccion_mesa" placeholder="Nueva Sección de Mesa" required>
+        <input type="number" id="update-capacidad" placeholder="Nueva Capacidad" required>
+        <input type="text" id="update-estado" placeholder="Nuevo Estado" required>
+        <button type="submit">Actualizar Mesa</button>
+    </form>
+
+    <h2>Eliminar Mesa</h2>
+    <form id="delete-form">
+        <input type="number" id="delete-id" placeholder="ID de la Mesa" required>
+        <button type="submit">Eliminar Mesa</button>
+    </form>
+
+    <script>
+                // Obtener mesas (GET)
+        async function fetchMesas() {
+            try {
+                const response = await fetch('http://localhost:3000/api/mesas');
+                if (!response.ok) {
+                    throw new Error('Error en la solicitud');
+                }
+                const mesas = await response.json();
+                const mesasList = document.getElementById('mesas-list');
+                mesasList.innerHTML = ''; // Limpiar lista antes de agregar nuevos elementos
+                
+                // Si hay mesas, las agregamos al DOM
+                if (mesas.length === 0) {
+                    mesasList.innerHTML = '<li>No hay mesas registradas.</li>';
+                } else {
+                    mesas.forEach(mesa => {
+                        const listItem = document.createElement('li');
+                        listItem.textContent = `Mesa ${mesa.numero_mesa} - Sección: ${mesa.seccion_mesa} - Capacidad: ${mesa.capacidad} - Estado: ${mesa.estado}`;
+                        mesasList.appendChild(listItem);
+                    });
+                }
+            } catch (error) {
+                console.error('Error al obtener las mesas:', error);
+            }
+        }
+
+        // Llamamos a fetchMesas() cuando la página cargue
+        window.onload = fetchMesas;
+
+        // Crear una mesa (POST)
+        document.getElementById('create-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const numero_mesa = document.getElementById('numero_mesa').value;
+            const seccion_mesa = document.getElementById('seccion_mesa').value;
+            const capacidad = document.getElementById('capacidad').value;
+            const estado = document.getElementById('estado').value;
+
+            const response = await fetch('http://localhost:3000/api/mesas', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    numero_mesa,
+                    seccion_mesa,
+                    capacidad,
+                    estado,
+                }),
+            });
+
+            if (response.ok) {
+                alert('Mesa creada con éxito');
+                fetchMesas(); // Actualizar lista de mesas
+            } else {
+                alert('Error al crear la mesa');
+            }
+        });
+
+        // Actualizar una mesa (PUT)
+        document.getElementById('update-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const id = document.getElementById('update-id').value;
+            const numero_mesa = document.getElementById('update-numero_mesa').value;
+            const seccion_mesa = document.getElementById('update-seccion_mesa').value;
+            const capacidad = document.getElementById('update-capacidad').value;
+            const estado = document.getElementById('update-estado').value;
+
+            const response = await fetch(`http://localhost:3000/api/mesas/${id}`, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    numero_mesa,
+                    seccion_mesa,
+                    capacidad,
+                    estado,
+                }),
+            });
+
+            if (response.ok) {
+                alert('Mesa actualizada con éxito');
+                fetchMesas(); // Actualizar lista de mesas
+            } else {
+                alert('Error al actualizar la mesa');
+            }
+        });
+        // Eliminar una mesa (DELETE)
+        document.getElementById('delete-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const id = document.getElementById('delete-id').value;
+
+            const response = await fetch(`http://localhost:3000/api/mesas/${id}`, {
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                alert('Mesa eliminada con éxito');
+                fetchMesas(); // Actualizar lista de mesas
+            } else {
+                alert('Error al eliminar la mesa');
+            }
+        });
+
+        // Inicializar la lista de mesas al cargar la página
+        //fetchMesas();
+        
+    </script>
+</body>
+</html>
